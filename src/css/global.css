@@ -1,0 +1,15 @@
+:root {
+    --color-bg: #311919; /*Color de fondo*/
+    --color-dark: #1f2937; /*Color para fondo de navegación*/
+    --color-accent: #ef4444; /*Color para texto prncipal de resaltado*/
+    --color-text: #ffffff; /*Color para texto principal*/
+    --color-p: #9ca3af; /*color para texto secundario*/
+    --color-background-section: #2b3644; /*color para fondo de secciones*/
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+}
