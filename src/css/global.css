@@ -13,3 +13,40 @@ body {
     color: var(--color-text);
     margin: 0;
 }
+
+#carrusel {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    gap: 2rem;
+    animation: mover 20s linear infinite;
+}
+
+.personaje {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    background: var(--color-dark);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.personaje img {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Animación automática */
+@keyframes mover {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
