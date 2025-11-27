@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',() =>{
     const DataMovie = document.getElementById("data_movie")
 
     async function GetDataMovie() {
-        const url = "http://www.omdbapi.com/?t=Chainsaw+Man&y=2025&apikey=4e5ca74d";
+        const url = "https://omdbapi.com/?t=Chainsaw+Man&y=2025&apikey=4e5ca74d";
 
         try{
             const response = await fetch(url);
