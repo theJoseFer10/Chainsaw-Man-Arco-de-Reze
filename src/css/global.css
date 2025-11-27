@@ -5,6 +5,11 @@
     --color-text: #ffffff; /*Color para texto principal*/
     --color-p: #9ca3af; /*color para texto secundario*/
     --color-background-section: #2b3644; /*color para fondo de secciones*/
+
+    --card-radius: 16px;
+    --card-padding: 1.2rem;
+    --card-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    --card-shadow-hover: 0 12px 28px rgba(0,0,0,0.35);
 }
 
 body {
@@ -27,22 +32,51 @@ body {
     animation: mover 20s linear infinite;
 }
 
+/* Tarjeta de personaje */
 .personaje {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 280px;
+    max-width: 280px;
+
     background: var(--color-dark);
-    padding: 1rem;
-    border-radius: 10px;
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    box-shadow: var(--card-shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
+.personaje:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Título */
+.personaje h4 {
+    font-size: 1.25rem;
+    margin: 0 0 .4rem 0;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+/* Descripción */
+.personaje p {
+    font-size: .9rem;
+    color: var(--color-p);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+/* Imagen del personaje */
 .personaje img {
-    width: 200px;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    margin-top: .5rem;
 }
 
 /* Animación automática */
