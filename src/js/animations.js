@@ -27,6 +27,3 @@ function animationsImg(){
 
 window.addEventListener('scroll', animationsInfo);
 window.addEventListener('scroll', animationsImg);
-
-animationsInfo();
-animationsImg();
