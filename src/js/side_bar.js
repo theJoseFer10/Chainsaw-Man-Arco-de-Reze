@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded',() => {
     const BtnSideBar = document.getElementById("menu_button");
     const BtnCloseSideBar = document.getElementById("close_sidebar");
     const SideBar = document.getElementById("sidebar_menu");
+    const links = SideBar.querySelectorAll("a");
 
     function openSidebar(){
         SideBar.classList.remove("-translate-x-full");
@@ -20,4 +21,8 @@ document.addEventListener('DOMContentLoaded',() => {
     if(BtnCloseSideBar){
         BtnCloseSideBar.addEventListener("click", closeSideBar);
     }
+
+    links.forEach(link => {
+        link.addEventListener("click", closeSideBar)
+    })
 });
